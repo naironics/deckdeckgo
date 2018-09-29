@@ -20,6 +20,11 @@ func newDeck() deck {
 	return cards
 }
 
+// Method to deal cards, returns cards dealt of handSize and remainingCards
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
+
 // Method to print cards in the deck
 func (d deck) print() {
 	for _, card := range d {
