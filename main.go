@@ -18,4 +18,7 @@ func main() {
 
 	// Printing String representation of decks
 	fmt.Println(cards.toString())
+
+	// Saving deck to file
+	cards.saveToFile("mycards.txt")
 }

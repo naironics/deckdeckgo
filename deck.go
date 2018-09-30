@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"strings"
 )
 
@@ -38,4 +39,9 @@ func (d deck) print() {
 // Method to convert a deck to a String
 func (d deck) toString() string {
 	return strings.Join([]string(d), ",")
+}
+
+// Method to write / save deck contents to a file [0666 = All Permissions]
+func (d deck) saveToFile(fileName string) error {
+	return ioutil.WriteFile(fileName, []byte(d.toString()), 0666)
 }
