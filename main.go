@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
 	cards := newDeck()
 
@@ -11,4 +15,7 @@ func main() {
 
 	// Printing all the 52 cards in deck
 	cards.print()
+
+	// Printing String representation of decks
+	fmt.Println(cards.toString())
 }
